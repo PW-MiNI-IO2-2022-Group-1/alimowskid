@@ -24,7 +24,7 @@ namespace StringCalculator
                 .Select(str => int.Parse(str))
                 .ToArray();
             if (numbers.Any(n => n < 0)) throw new ArgumentException("Negative number");
-            return numbers.Where(n => n <= 1000).Sum();
+            return numbers.Where(n => n <= 1000).Sum() - 1;
         }
     }
 }
